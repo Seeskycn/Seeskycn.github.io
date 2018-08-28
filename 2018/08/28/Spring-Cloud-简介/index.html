@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/8 | my blog</title>
+  <title>Spring Cloud 简介 | my blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="愿你走出半生路 归来仍是少年">
-<meta property="og:type" content="website">
-<meta property="og:title" content="my blog">
-<meta property="og:url" content="http://yoursite.com/archives/2018/08/index.html">
+  <meta name="description" content="SpringCloud微服务的概述: 就目前而言,对于微服务业界并没有一个同一的,标准的定义 简而言之,微服务架构风格是一种将单个应用程序作为一套小型服务开发的方法,妹子应用程序都运行在自己的进程中,并与轻量级机制进行通信(通常是HTTP Restful API),这些服务都是围绕业务功能构建的,可以通过全自动部署机制独立部署,这些服务的集中管理最少,可以用不同的编程语言编写,并使用不同的数据存储">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Cloud 简介">
+<meta property="og:url" content="http://yoursite.com/2018/08/28/Spring-Cloud-简介/index.html">
 <meta property="og:site_name" content="my blog">
-<meta property="og:description" content="愿你走出半生路 归来仍是少年">
+<meta property="og:description" content="SpringCloud微服务的概述: 就目前而言,对于微服务业界并没有一个同一的,标准的定义 简而言之,微服务架构风格是一种将单个应用程序作为一套小型服务开发的方法,妹子应用程序都运行在自己的进程中,并与轻量级机制进行通信(通常是HTTP Restful API),这些服务都是围绕业务功能构建的,可以通过全自动部署机制独立部署,这些服务的集中管理最少,可以用不同的编程语言编写,并使用不同的数据存储">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-28T14:55:17.881Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my blog">
-<meta name="twitter:description" content="愿你走出半生路 归来仍是少年">
+<meta name="twitter:title" content="Spring Cloud 简介">
+<meta name="twitter:description" content="SpringCloud微服务的概述: 就目前而言,对于微服务业界并没有一个同一的,标准的定义 简而言之,微服务架构风格是一种将单个应用程序作为一套小型服务开发的方法,妹子应用程序都运行在自己的进程中,并与轻量级机制进行通信(通常是HTTP Restful API),这些服务都是围绕业务功能构建的,可以通过全自动部署机制独立部署,这些服务的集中管理最少,可以用不同的编程语言编写,并使用不同的数据存储">
   
   
     <link rel="icon" href="/favicon.png">
@@ -167,49 +168,197 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Spring-Cloud-简介" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/28/Spring-Cloud-简介/" class="archive-article-date">
-  	<time datetime="2018-08-28T14:51:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/28/Spring-Cloud-简介/">Spring Cloud 简介</a>
+    <h1 class="article-title" itemprop="name">
+      Spring Cloud 简介
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2018/08/28/Spring-Cloud-简介/" class="archive-article-date">
+  	<time datetime="2018-08-28T14:51:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h1><h3 id="微服务的概述"><a href="#微服务的概述" class="headerlink" title="微服务的概述:"></a>微服务的概述:</h3><p> 就目前而言,对于微服务业界并没有一个同一的,标准的定义</p>
+<p>简而言之,微服务架构风格是一种将单个应用程序作为一套小型服务开发的方法,妹子应用程序都运行在自己的进程中,并与轻量级机制进行通信(通常是HTTP Restful API),这些服务都是围绕业务功能构建的,可以通过全自动部署机制独立部署,这些服务的集中管理最少,可以用不同的编程语言编写,并使用不同的数据存储技术</p>
+<p>微服务化的核心就是将传统的一站式应用,根据业务拆分成一个个的服务,彻底的去耦合,每一个微服务提供单个业务功能的服务,一个服务做一件事,从技术角度看就是一种小而独立的处理过程,类上进程的概念,能够自行单独启动或销毁,拥有自己独立的数据库</p>
+<a id="more"></a>
+<h3 id="微服务与微服务架构"><a href="#微服务与微服务架构" class="headerlink" title="微服务与微服务架构"></a>微服务与微服务架构</h3><p><strong>微服务 : </strong> 强调的是服务的大小,它关注的是某一个点,是具体解决某一个问题/提供落地对应服务的一个服务应用,狭义的看,可以看作ide里面的一个个微服务工程或Module</p>
+<p><strong>微服务架构 : </strong> 微服务架构是一种架构模式,它提倡的是将单一应用程序划分为一组小的服务,服务之间互相协调,互相配合,为用户提供最终价值,每个服务运行在其独立的进程中,服务与服务之间采用轻量级的通信机制相互协作(通常是基于HTTP协议的RESTgul api),每个服务都围绕着具体业务进行构建,并且能够被独立的部署带生产环境等,另外,应当避免同一的,集中式的服务管理机制,对具体的一个服务而言,应根据业务的上下文,选择合适的语言,工具进行构建</p>
+<h3 id="微服务的优缺点"><a href="#微服务的优缺点" class="headerlink" title="微服务的优缺点"></a>微服务的优缺点</h3><p> <strong>优点 : </strong></p>
+<ol>
+<li>每个服务足够内聚,足够小,代码容易理解,这样能聚焦一个指定的业务功能或业务需求</li>
+<li>开发简单,开发效率高,一个服务可能就是专一的只敢一件事</li>
+<li>微服务能够被小团队单独开发</li>
+<li>微服务是送耦合的,是由功能意义的服务,无论是在开发阶段或是部署阶段都是独立的</li>
+<li>微服务能使用不同的语言开发</li>
+<li>易于和第三方的集成,微服务允许容易且灵活的方式集成自动部署,通过持续集成工具,如Jenkins,Hudson,bamboo</li>
+<li>微服务易于被一个开发人员来理解,修改和维护,这样小团队能够更关注自己的工作成果,无需通过合作才能体现价值</li>
+<li>微服务允许你利用融合最新技术</li>
+<li>微服务只是业务逻辑的代码,不会和HTML,CSS或其他的界面组件混合</li>
+<li>每个微服务都有自己的存储能力,可以由自己的数据库,也可以有统一数据库</li>
+</ol>
+<p><strong>缺点 : </strong></p>
+<ol>
+<li>开发人员要处理分布式系统的复杂性</li>
+<li>多服务运维难度,随着服务的增加,运维的压力也在增大</li>
+<li>系统部署依赖</li>
+<li>服务间通信成本</li>
+<li>数据一致型</li>
+<li>系统集成测试</li>
+<li>性能监控</li>
+</ol>
+<h3 id="SpringCloud-1"><a href="#SpringCloud-1" class="headerlink" title="SpringCloud"></a>SpringCloud</h3><p><strong>概述 :</strong></p>
+<p>SpringCloud是分布式微服务架构下的一站式解决方案,是各个微服务架构落地技术的集合体,俗称微服务全家桶</p>
+<p>SpringCloud,基于SpringBoot提供了一套微服务解决方案,包括服务注册与发现,配置中心,全链路监控,服务网管,负载均衡,熔断器等组件,除了基于NetFlix的开源组件做高度抽象封装之外,还有一些选型中立的开源组件</p>
+<p>SpringCloud利用SpringBoot的开发巧妙的简化了分布式系统基础设施的开发,SpringCloud为开发人员提供了快速构建分布式系统的一些工具,包括配置管理,服务发现,断路器,路由,微代理,事件总线,全局锁,决策竞选,分布式会话等待,他们都可以用SpringBoot的开发风格做到一键启动和部署</p>
+<p>SpringBoot并没有重复造轮子,它只是将目前各家公司开发的比较参数,禁得起实际考验的服务框架组合起来,通过SpringBoot风格进行在封装丢弃了复杂的配置和实现原理,最终给开发者留下简单易懂,易部署和易维护与的分布式系统开的工具包</p>
+<p><strong>SpringCloud 和SpringBoot 的关系</strong> </p>
+<p>SpringBoot 专注于快速方便的开发单个个体微服务</p>
+<p>SpringCloud是关注全局的微服务协调治理框架,它将SpringBppt开发的一个个简单的微服务整合并管理起来,为各个微服务之间提供,配置管理,服务发现,断路器,路由,微代理,事件总线,全局锁,决策竞选,分布式会话等集成服务</p>
+<p>SpringBoot可以离开SpringCloud独立使用开发项目,但是SpringClouf离不开SpringBoot,属于依赖关系</p>
+<p>SpringBoot专注于快速,方便的开发单个微服务个体,SpringCloud关注全局的服务治理框架</p>
+<h3 id="SpringCloud-与-Dubbo-的区别"><a href="#SpringCloud-与-Dubbo-的区别" class="headerlink" title="SpringCloud 与 Dubbo 的区别"></a>SpringCloud 与 Dubbo 的区别</h3><p>==最大的区别就是SpringCLoud抛弃了Dubbo的RPC通信,采用的是基于HTTP的REST方式,==严格来说,这两种方式各有优劣,虽然从一定程度上来说,后者牺牲了服务调用的性能,但也避免了原生RPC带来的问题,而且Rest相比于RPC更为灵活,服务提供方和调用方的依赖只依靠一纸契约,不存在代码级别的强依赖,着在强调快速演化的微服务环境下,显得更加合适</p>
+<p>品牌机与组装机的区别</p>
+<p>很明显,SpringCloud的功能比Dubbo更加强大,涵盖面更广,而且作为Spring的拳头项目,它也能够与Spring Framework,SpringBoot,SpringData,SpringBatch等其他的Spring项目网媒融合,这些对于微服务而言是至关重要的,使用Dubbo构建的微服务项目架构就像组装电脑,各个环节我们选择自由度很高,但最终结果可能因为一条内存质量不许就点不亮了,总时让人不怎么放心,但如果你是一名高手,那么这些都不是问题;而SpringCLoud就像是品牌机,在SpringSource的整合下,做了大量的兼容性测试,保证了集群拥有更高的稳定性,但是如果要在使用非原装组件外的对象,就要对其基础有足够的了解</p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/28/Spring-Cloud-简介/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -232,8 +381,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
