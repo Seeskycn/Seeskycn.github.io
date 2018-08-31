@@ -16,7 +16,7 @@
 <meta property="og:description" content="Eureka是什么Eureka是Netflix的一个子模块，也是核心模块之一。Eureka是一个基于REST的服务，用于定位服务，以实现云端中间层服务发现和故障转移。服务注册与发现对于微服务架构来说是非常重要的，有了服务发现与注册，只需要使用服务的标识符，就可以访问到服务，而不需要修改服务调用的配置文件了。功能类似于dubbo的注册中心，比如Zookeeper。 能干什么Eureka 分为客户端和">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="d:/DEVELOP/hexo/source/_posts/Eureka组件/1535469687525.png">
-<meta property="og:updated_time" content="2018-08-28T15:24:50.529Z">
+<meta property="og:updated_time" content="2018-08-31T11:05:18.379Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Eureka组件">
 <meta name="twitter:description" content="Eureka是什么Eureka是Netflix的一个子模块，也是核心模块之一。Eureka是一个基于REST的服务，用于定位服务，以实现云端中间层服务发现和故障转移。服务注册与发现对于微服务架构来说是非常重要的，有了服务发现与注册，只需要使用服务的标识符，就可以访问到服务，而不需要修改服务调用的配置文件了。功能类似于dubbo的注册中心，比如Zookeeper。 能干什么Eureka 分为客户端和">
@@ -193,6 +193,7 @@
         <h3 id="Eureka是什么"><a href="#Eureka是什么" class="headerlink" title="Eureka是什么"></a>Eureka是什么</h3><p>Eureka是Netflix的一个子模块，也是核心模块之一。Eureka是一个基于REST的服务，用于定位服务，以实现云端中间层服务发现和故障转移。服务注册与发现对于微服务架构来说是非常重要的，有了服务发现与注册，只需要使用服务的标识符，就可以访问到服务，而不需要修改服务调用的配置文件了。功能类似于dubbo的注册中心，比如Zookeeper。</p>
 <h3 id="能干什么"><a href="#能干什么" class="headerlink" title="能干什么"></a>能干什么</h3><p>Eureka 分为客户端和Server端</p>
 <p>Eureka Server作为服务注册功能的服务器,他是服务中心,而系统中的其他微服务,使用Eureka的客户端连接到Eureka Server并维持心跳连接,这样系统的维护人员就可以通过Eureka Server 老监控整个系统中的各个微服务是否正常运行,SoringCloud的一些其他模块就可以通过Eureka Server来发现系统中的其他的微服务,并执行相关的逻辑</p>
+<a id="more"></a>
 <h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3><p><img src="D:\DEVELOP\hexo\source\_posts\Eureka组件\1535469687525.png" alt="1535469687525"></p>
 <h4 id="三大角色的关系"><a href="#三大角色的关系" class="headerlink" title="三大角色的关系"></a>三大角色的关系</h4><p>Eureka Server 提供服务注册和发现的功能</p>
 <p>Service Provider 服务提供方将自身的服务注入到Eureka ,从而使服务的消费方能够找到</p>
