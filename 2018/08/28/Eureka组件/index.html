@@ -16,7 +16,7 @@
 <meta property="og:description" content="Eureka是什么Eureka是Netflix的一个子模块，也是核心模块之一。Eureka是一个基于REST的服务，用于定位服务，以实现云端中间层服务发现和故障转移。服务注册与发现对于微服务架构来说是非常重要的，有了服务发现与注册，只需要使用服务的标识符，就可以访问到服务，而不需要修改服务调用的配置文件了。功能类似于dubbo的注册中心，比如Zookeeper。 能干什么Eureka 分为客户端和">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="d:/DEVELOP/hexo/source/_posts/Eureka组件/1535469687525.png">
-<meta property="og:updated_time" content="2018-08-31T11:05:18.379Z">
+<meta property="og:updated_time" content="2018-08-31T11:08:20.609Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Eureka组件">
 <meta name="twitter:description" content="Eureka是什么Eureka是Netflix的一个子模块，也是核心模块之一。Eureka是一个基于REST的服务，用于定位服务，以实现云端中间层服务发现和故障转移。服务注册与发现对于微服务架构来说是非常重要的，有了服务发现与注册，只需要使用服务的标识符，就可以访问到服务，而不需要修改服务调用的配置文件了。功能类似于dubbo的注册中心，比如Zookeeper。 能干什么Eureka 分为客户端和">
@@ -192,7 +192,7 @@
       
         <h3 id="Eureka是什么"><a href="#Eureka是什么" class="headerlink" title="Eureka是什么"></a>Eureka是什么</h3><p>Eureka是Netflix的一个子模块，也是核心模块之一。Eureka是一个基于REST的服务，用于定位服务，以实现云端中间层服务发现和故障转移。服务注册与发现对于微服务架构来说是非常重要的，有了服务发现与注册，只需要使用服务的标识符，就可以访问到服务，而不需要修改服务调用的配置文件了。功能类似于dubbo的注册中心，比如Zookeeper。</p>
 <h3 id="能干什么"><a href="#能干什么" class="headerlink" title="能干什么"></a>能干什么</h3><p>Eureka 分为客户端和Server端</p>
-<p>Eureka Server作为服务注册功能的服务器,他是服务中心,而系统中的其他微服务,使用Eureka的客户端连接到Eureka Server并维持心跳连接,这样系统的维护人员就可以通过Eureka Server 老监控整个系统中的各个微服务是否正常运行,SoringCloud的一些其他模块就可以通过Eureka Server来发现系统中的其他的微服务,并执行相关的逻辑</p>
+<p>Eureka Server作为服务注册功能的服务器,他是服务中心,而系统中的其他微服务,使用Eureka的客户端连接到Eureka Server并维持心跳连接,这样系统的维护人员就可以通过Eureka Server 来监控整个系统中的各个微服务是否正常运行,SpringCloud的一些其他模块就可以通过Eureka Server来发现系统中的其他的微服务,并执行相关的逻辑</p>
 <a id="more"></a>
 <h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3><p><img src="D:\DEVELOP\hexo\source\_posts\Eureka组件\1535469687525.png" alt="1535469687525"></p>
 <h4 id="三大角色的关系"><a href="#三大角色的关系" class="headerlink" title="三大角色的关系"></a>三大角色的关系</h4><p>Eureka Server 提供服务注册和发现的功能</p>
@@ -210,7 +210,7 @@
 <h3 id="作为服务注册中心Eureka与Zookeeper好在哪里"><a href="#作为服务注册中心Eureka与Zookeeper好在哪里" class="headerlink" title="作为服务注册中心Eureka与Zookeeper好在哪里"></a><strong>作为服务注册中心Eureka与Zookeeper好在哪里</strong></h3><p>著名的CAP理论指出,一个分布式系统不可能同时满足C(一致性),A(可用性),P(分区容错性),由于分区容错性P在分布式系统中必须要保证,因此我们只能在A和C之间进行权衡</p>
 <p>==Zookeeper保证的是CP==</p>
 <p>==Eureka保证的是AP==</p>
-<p><strong>zookeeper保证的是CP</strong></p>
+<p><strong>Zookeeper保证的是CP</strong></p>
 <p>当向注册中心查询服务列表时,我们可以容忍注册中心返回的是几分钟以前的注册信息,但不能接受服务器直接down掉不可用,也就是说,服务注册功能对可用性的要求高于一致性,但是zk会出现这样一种情况,当master节点因为网络故障与其他节点失去联系是,剩余节点会重新进行leade选举,问题在于,选举leader的时间太长,30s-120s,而且选举期间整个zk集群都是不可用的,这就导致在选举期间注册服务器的瘫痪,在云部署的环境下,因网络问题是的zk集群失去master节点是较大概率会发生的事,虽然服务能够最终恢复,但漫长的选举时间导致注册长期不可用是不能容忍的</p>
 <p><strong>Eureka保证的是AP</strong></p>
 <p>Eureka看明白了这一点,因此在设计式就优先保证可用性.Eureka各个节点都是平等的,几个节点挂掉不会影响正常节点的工作 ,剩余的节点依然可以提供注册和查询服务,而Eureka客户端在向某个Eureka注册时如果发现连接失败,则会自动切换至其他的节点,只要有一台Eureka还在,就能保证注册服务可用(保证可用性),只不过查到的信息可能不是最新的(不保证强一致性),除此之外,Eureka还有一种自我保护机制,如果在15分钟能超过85%的节点都没有正常的心跳,那么Eureka就认为客户端与注册中心出现了网络故障,此时会出现一下几种情况:</p>
