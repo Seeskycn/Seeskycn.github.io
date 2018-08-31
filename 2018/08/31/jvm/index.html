@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Eureka组件 | my blog</title>
+  <title>jvm | my blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Eureka是什么Eureka是Netflix的一个子模块，也是核心模块之一。Eureka是一个基于REST的服务，用于定位服务，以实现云端中间层服务发现和故障转移。服务注册与发现对于微服务架构来说是非常重要的，有了服务发现与注册，只需要使用服务的标识符，就可以访问到服务，而不需要修改服务调用的配置文件了。功能类似于dubbo的注册中心，比如Zookeeper。 能干什么Eureka 分为客户端和">
+  <meta name="description" content="JVM体系结构:jvm是运行在操作系统上的,它与硬件没有直接的交互,操作系统之上  类加载器ClassLoader负责加载class文件,class文件在文件的开头有特定的文件标示,并且 CLassLoader只负责class文件的加载,至于它是否可以运行,则有ExecutionEngine决定 分类:  启动类加载器(Bootstrap) : 没有访问权限 扩展类加载器(Extension) 应">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Eureka组件">
-<meta property="og:url" content="http://yoursite.com/2018/08/28/Eureka组件/index.html">
+<meta property="og:title" content="jvm">
+<meta property="og:url" content="http://yoursite.com/2018/08/31/jvm/index.html">
 <meta property="og:site_name" content="my blog">
-<meta property="og:description" content="Eureka是什么Eureka是Netflix的一个子模块，也是核心模块之一。Eureka是一个基于REST的服务，用于定位服务，以实现云端中间层服务发现和故障转移。服务注册与发现对于微服务架构来说是非常重要的，有了服务发现与注册，只需要使用服务的标识符，就可以访问到服务，而不需要修改服务调用的配置文件了。功能类似于dubbo的注册中心，比如Zookeeper。 能干什么Eureka 分为客户端和">
+<meta property="og:description" content="JVM体系结构:jvm是运行在操作系统上的,它与硬件没有直接的交互,操作系统之上  类加载器ClassLoader负责加载class文件,class文件在文件的开头有特定的文件标示,并且 CLassLoader只负责class文件的加载,至于它是否可以运行,则有ExecutionEngine决定 分类:  启动类加载器(Bootstrap) : 没有访问权限 扩展类加载器(Extension) 应">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/08/28/Eureka组件/Eureka组件/1535469687525.png">
-<meta property="og:updated_time" content="2018-08-31T11:10:20.112Z">
+<meta property="og:image" content="http://yoursite.com/2018/08/31/1535718359157.png">
+<meta property="og:updated_time" content="2018-08-31T12:26:35.410Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Eureka组件">
-<meta name="twitter:description" content="Eureka是什么Eureka是Netflix的一个子模块，也是核心模块之一。Eureka是一个基于REST的服务，用于定位服务，以实现云端中间层服务发现和故障转移。服务注册与发现对于微服务架构来说是非常重要的，有了服务发现与注册，只需要使用服务的标识符，就可以访问到服务，而不需要修改服务调用的配置文件了。功能类似于dubbo的注册中心，比如Zookeeper。 能干什么Eureka 分为客户端和">
-<meta name="twitter:image" content="http://yoursite.com/2018/08/28/Eureka组件/Eureka组件/1535469687525.png">
+<meta name="twitter:title" content="jvm">
+<meta name="twitter:description" content="JVM体系结构:jvm是运行在操作系统上的,它与硬件没有直接的交互,操作系统之上  类加载器ClassLoader负责加载class文件,class文件在文件的开头有特定的文件标示,并且 CLassLoader只负责class文件的加载,至于它是否可以运行,则有ExecutionEngine决定 分类:  启动类加载器(Bootstrap) : 没有访问权限 扩展类加载器(Extension) 应">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/31/1535718359157.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -170,56 +170,132 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Eureka组件" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-jvm" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Eureka组件
+      jvm
     </h1>
   
 
         
-        <a href="/2018/08/28/Eureka组件/" class="archive-article-date">
-  	<time datetime="2018-08-28T15:20:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-28</time>
+        <a href="/2018/08/31/jvm/" class="archive-article-date">
+  	<time datetime="2018-08-31T12:24:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Eureka是什么"><a href="#Eureka是什么" class="headerlink" title="Eureka是什么"></a>Eureka是什么</h3><p>Eureka是Netflix的一个子模块，也是核心模块之一。Eureka是一个基于REST的服务，用于定位服务，以实现云端中间层服务发现和故障转移。服务注册与发现对于微服务架构来说是非常重要的，有了服务发现与注册，只需要使用服务的标识符，就可以访问到服务，而不需要修改服务调用的配置文件了。功能类似于dubbo的注册中心，比如Zookeeper。</p>
-<h3 id="能干什么"><a href="#能干什么" class="headerlink" title="能干什么"></a>能干什么</h3><p>Eureka 分为客户端和Server端</p>
-<p>Eureka Server作为服务注册功能的服务器,他是服务中心,而系统中的其他微服务,使用Eureka的客户端连接到Eureka Server并维持心跳连接,这样系统的维护人员就可以通过Eureka Server 来监控整个系统中的各个微服务是否正常运行,SpringCloud的一些其他模块就可以通过Eureka Server来发现系统中的其他的微服务,并执行相关的逻辑</p>
-<a id="more"></a>
-<h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3><p><img src=".\Eureka组件\1535469687525.png" alt="1535469687525"></p>
-<h4 id="三大角色的关系"><a href="#三大角色的关系" class="headerlink" title="三大角色的关系"></a>三大角色的关系</h4><p>Eureka Server 提供服务注册和发现的功能</p>
-<p>Service Provider 服务提供方将自身的服务注入到Eureka ,从而使服务的消费方能够找到</p>
-<p>Service Consumer 服务的消费方从Eureka获取服务列表,从而能够消费服务</p>
-<p> <strong>传统关系型数据库ACID:</strong></p>
-<p>A: 原子性 C一致性 I 隔离性 D 持久性</p>
-<p><strong>CAP : </strong> </p>
-<p>CAP原则又称CAP定理,指的是在一个分布式的系统中,Consistency(一致性),Avaliablity(可用性),Partition(分区容错性),三者不可兼得</p>
-<p> <strong>一致性 :</strong> 在分布式系统中的所有数据备份,在同一时刻是否同样的值(等同于所有节点访问同一份数据最新的数据副本)</p>
-<p><strong>可用性 :</strong> 在集群中一部分节点故障后,集群整体是否还能响应客户端的读写要求(对数据更新具备高可用性)</p>
-<p><strong>分区容错性 :</strong> 以实际效果而言,分区相当于对通信的时限要求,系统如果不能在时限内大曾数据一致性,就意味着发生了分区的情况,必须就但钱操作在C和A之间做出选择</p>
-<p>CAP理论就是说在分布式存储系统中,最多只能实现上面的两点,==而由于当前网络硬件肯定会出现延迟丢包等问题,所以分区容忍性是我们必须要实现的,==所以我们只能在一致性和可用性之间进行权衡</p>
-<p>没有NOSQL系统能同时满足这三点</p>
-<h3 id="作为服务注册中心Eureka与Zookeeper好在哪里"><a href="#作为服务注册中心Eureka与Zookeeper好在哪里" class="headerlink" title="作为服务注册中心Eureka与Zookeeper好在哪里"></a><strong>作为服务注册中心Eureka与Zookeeper好在哪里</strong></h3><p>著名的CAP理论指出,一个分布式系统不可能同时满足C(一致性),A(可用性),P(分区容错性),由于分区容错性P在分布式系统中必须要保证,因此我们只能在A和C之间进行权衡</p>
-<p>==Zookeeper保证的是CP==</p>
-<p>==Eureka保证的是AP==</p>
-<p><strong>Zookeeper保证的是CP</strong></p>
-<p>当向注册中心查询服务列表时,我们可以容忍注册中心返回的是几分钟以前的注册信息,但不能接受服务器直接down掉不可用,也就是说,服务注册功能对可用性的要求高于一致性,但是zk会出现这样一种情况,当master节点因为网络故障与其他节点失去联系是,剩余节点会重新进行leade选举,问题在于,选举leader的时间太长,30s-120s,而且选举期间整个zk集群都是不可用的,这就导致在选举期间注册服务器的瘫痪,在云部署的环境下,因网络问题是的zk集群失去master节点是较大概率会发生的事,虽然服务能够最终恢复,但漫长的选举时间导致注册长期不可用是不能容忍的</p>
-<p><strong>Eureka保证的是AP</strong></p>
-<p>Eureka看明白了这一点,因此在设计式就优先保证可用性.Eureka各个节点都是平等的,几个节点挂掉不会影响正常节点的工作 ,剩余的节点依然可以提供注册和查询服务,而Eureka客户端在向某个Eureka注册时如果发现连接失败,则会自动切换至其他的节点,只要有一台Eureka还在,就能保证注册服务可用(保证可用性),只不过查到的信息可能不是最新的(不保证强一致性),除此之外,Eureka还有一种自我保护机制,如果在15分钟能超过85%的节点都没有正常的心跳,那么Eureka就认为客户端与注册中心出现了网络故障,此时会出现一下几种情况:</p>
+        <h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><p>体系结构:jvm是运行在操作系统上的,它与硬件没有直接的交互,操作系统之上</p>
+<p><img src=".\1535718359157.png" alt="1535718359157"></p>
+<h3 id="类加载器ClassLoader"><a href="#类加载器ClassLoader" class="headerlink" title="类加载器ClassLoader"></a>类加载器ClassLoader</h3><p>负责加载class文件,class文件在文件的开头有特定的文件标示,并且 CLassLoader只负责class文件的加载,至于它是否可以运行,则有ExecutionEngine决定</p>
+<p>分类:</p>
 <ol>
-<li>Eureka不在从注册列表移除因为长时间没收到心跳而因该过期的服务</li>
-<li>Eureka任然能够接受新服务的注册和查询请求,但是不会被同步到其他节点上(即保证当前节点依然可用)</li>
-<li>当网络稳定时,当前实例新的注册信息会被同步到其他节点中</li>
+<li>启动类加载器(Bootstrap) : 没有访问权限</li>
+<li>扩展类加载器(Extension)</li>
+<li>应用程序加载器(AppClassLoader)</li>
+<li>用户自定义加载器</li>
 </ol>
-<p>因此,Eureka可用很好的因对因网络故障导致部分节点失去联系的情况而不会向zookeeper那样使整个注册服务瘫痪</p>
+<p>双亲委派机制 + 沙箱安全机制</p>
+<p>双亲委派机制的执行过程 : 如果一个类记载器收到了类记载的请求,它首先不会自己去尝试加载这个类,而是把这个请求委派给父类加载器去完成,每一个层次的加载器都是如此,因此所有的请求最终都应该传送到顶层的启动类记载器中,只有当父类加载器反馈自己无法完全加载请求时,子类才会尝试自己去加载</p>
+<p>沙箱安全机制 : 沙箱安全机制是由基于双亲委派机制上的,采取的一种JVM自我保护的机制,加入你要写一个java.alng.String的类,由于双亲委派机制的原理,此请求会先交给BootStrap试图进行加载,但BootStrap在加载类时首先通过包和类名查找rt.jar中有没有该类,由就优先记载rt.jar包中的类,保证了java的运行机制不会被破坏</p>
+<h3 id="Native-Native-Method-Stack-了解"><a href="#Native-Native-Method-Stack-了解" class="headerlink" title="Native(Native Method Stack)(了解)"></a>Native(Native Method Stack)(了解)</h3><p>JNI : Java Native Interface </p>
+<p>带有native的方法都进本地方法栈</p>
+<p>本地接口的作用是融合不同的编程语言为Java所用,它的初衷是融合C/C++程序,伪劣调用C/C++程序,于是就在内存中专门开辟了一块区域处理标记为native的代码,它的具体做法是Native Method Stack中登记Native方法,在Execution Engine 执行时加载Native Libraies</p>
+<p><strong>Native Method Stack</strong> : 它的具体作用是在本地方法栈中登记Native 方法,在执行引擎执行时加载本地方法库</p>
+<h3 id="PC寄存器-程序计数器Program-Counter-Register"><a href="#PC寄存器-程序计数器Program-Counter-Register" class="headerlink" title="PC寄存器(程序计数器Program Counter Register)"></a>PC寄存器(程序计数器Program Counter Register)</h3><p>每个线程都有一个程序计数器,是线程私有的,就是一个指针,指向方法去中的方法字节码(用来读取指向下一条指令的地址,也即将要执行的指令代码),由执行引擎读取下一条指令,是一个非常小的内存空间,几乎可以忽略不记</p>
+<h3 id="方法区-Method-Area-可调优"><a href="#方法区-Method-Area-可调优" class="headerlink" title="方法区(Method Area)(可调优)"></a>方法区(Method Area)(可调优)</h3><p>方法区是<strong>被所有线程共享</strong>,所有字段和方法字节码,以及一些特殊方法如构造函数,接口代码也在此定义.简单说,所有定义的方法的信息都保存在该区域,此区属于共享区间.</p>
+<p><strong>静态变量 + 常量 + 类信息(构造方法/定义接口) + 运行时常量池存在方法区中</strong></p>
+<p>实例变量存在堆内存中和方法区无关</p>
+<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><p>栈也叫栈内存,主管Java程序的运行,是在线程创建是创建,它的生命周期是跟随线程的生命周期,线程结束栈内存也就释放,对于栈来说,不存在垃圾回收问题,只要线程一结束该栈就OVER,生命周期和线程一致,是线程私有的,8中基本数据类型的变量 + 对象的引用变量 + 实例方法都是在函数的栈内存中分配</p>
+<p>栈存储什么?</p>
+<p>栈帧中主要保存3类数据:</p>
+<ol>
+<li>本地变量 : 输入参数和输出参数以及方法内的变量</li>
+<li>栈操作: 记录出栈,入栈的操作</li>
+<li>栈帧(每一个方法)数据: 包括类文件,方法等等</li>
+</ol>
+<h3 id="三种JVM"><a href="#三种JVM" class="headerlink" title="三种JVM"></a>三种JVM</h3><p>Sun公司的HotSpot</p>
+<p>BEA公司的JRockit</p>
+<p>IBM公司的J9VM</p>
+<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><p>一个JVM实例只存在一个堆内存,堆内存的大小是可以调节的,类加载器读取了类文件后,需要把类,方法,常变量放到堆内存中,保存所有引用类型的真实信息,以方便执行器执行. </p>
+<p>如果出现java.lang.OutOfMemoryError:java heap space 异常,说明Java虚拟机的堆内存不够: 原因有二:</p>
+<ol>
+<li>Java虚拟机的对内存设置不够,可以通过参数-Xms,_Xmx来调整</li>
+<li>代码中创建了大量大对象,并且长时间不能被垃圾回收器收集(存在被引用)</li>
+</ol>
+<p>在逻辑上分为:新生区 + 养老区 + 永久存储区</p>
+<p>物理上分为 : 新生区 + 养老区</p>
+<p><strong>永久区:</strong></p>
+<p>永久存储区是一个常驻内存区域,用去存放JDL自身锁携带的CLass,Interface 的元数据,也就是说它存储的是运行环境必须的类信息.,被装载进此区域的数据是不会被垃圾回收器回收掉的,关闭JAM才会释放此区域所占用的内存</p>
+<p>java.lang.OutOfMemoryError: PerGen space 说明是Java虚拟机对永久代Perm内存设置不够.一般出现啊这种情况,都是程序启动时需要加载大量的第三方jar包.例如一个Tomcat下部署了太多的应用,或者大量动态反射生成的类不断被加载,最终Perm区被占满</p>
+<p>Jdk1.6 : 之前 : 有永久代,常量池1.6在方法区</p>
+<p>Jdk1.7 : 有永久代,但已经逐步去永久带,常量池1.7在堆</p>
+<p>Jdk1.8 : 无永久代,常量池在元空间 </p>
+<h3 id="堆内存调优-参数"><a href="#堆内存调优-参数" class="headerlink" title="堆内存调优,参数:"></a>堆内存调优,参数:</h3><p>-Xms : 设置初始分配大小,默认为物理内存的”1/64”</p>
+<p>-Xms: 最大分配内存,默认为物理内存的”1/4”</p>
+<p>-XX:+PrintGCDetails : 输出详细的GC处理日志</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法:"></a>方法:</h3><h2 id="GC垃圾回收"><a href="#GC垃圾回收" class="headerlink" title="GC垃圾回收"></a>GC垃圾回收</h2><p><strong>分代回收算法</strong> : </p>
+<ol>
+<li>次数上频繁收集Young区</li>
+<li>次数上较少收集Old区</li>
+<li>基本不动Perm区</li>
+</ol>
+<p>JVM在进行GC时,并非每次都对上面三个内存区域一起回收的,大部分时候回收的都是指新生代,因此GC按照回收的区域又分了两种类型,一种是普通GC(minor GC),一种是全局GC(major GC or Full GC)</p>
+<ol>
+<li>普通GC(minor GC) : 只针对新生代区域的GC</li>
+<li>全局GC(major GC or Full GC) : 针对年老代的GC,偶尔伴随对新生代的GC以及对永久代的GC</li>
+</ol>
+<h3 id="GC垃圾回收算法"><a href="#GC垃圾回收算法" class="headerlink" title="GC垃圾回收算法:"></a>GC垃圾回收算法:</h3><ol>
+<li><p><strong>引用计数法(了解)</strong> : 每被引用一次自身计数器就加1,解决不了循环引用</p>
+<ol>
+<li>缺点 : 每次对对象赋值均要维护引用计数器,且计数器本身也有一定的消耗,较难处理循环引用</li>
+</ol>
+</li>
+<li><p>==复制算法(Copying)==</p>
+<ol>
+<li><p>年轻代中使用的是Minor GC,这种GC算法采用的是复制算法(Copying)(年轻代对象死的多活得少,只复制活的对象)</p>
+</li>
+<li><p>复制之后有交换,谁空谁是t o(幸存1区)</p>
+</li>
+<li><p><strong>原理</strong> : MInor GC会将Eden中所有活的对象都移到Survivor区域中,如果Survivor区中放不下,那么剩下的活的随想就被移到Old generation中,也即<strong>一旦收集后,Eden就变成空的了</strong>,当对象在Eden(包括一个Servivor区域,这里假设是from区域)出生后,在经过一次MInor GC后,如过对象还或者,并且能够被另外一块Survivor区域锁容纳(上面已经假设为from区域,这里应为to区域,即to区域有足够的内存空间来存储Eden和From区域中存活的对象),则使用复制算法将这些还存活的对象复制到例外一块Servivor区域(即to区域)中,没熬过一次MinorGC,就将对象的年龄+1,当对象的年龄到达某个值时(默认是15岁,通过</p>
+<p>-XX:MaxTenuringThreshould来设定参数),这些对象就会成为老年代</p>
+<p><strong>优点</strong>:无内存碎片 <strong>缺点</strong> : 占空间 新生代默认比例 :  8:1:1</p>
+</li>
+</ol>
+</li>
+<li><p><strong>标记清除(Mark-Sweep)</strong>精确打击,定点清除</p>
+<ol>
+<li><strong>优点</strong> : 节约空间 <strong>缺点</strong> : 效率比较低,需要暂停整个应用,空闲内存不连续产生内存碎片,两次扫描,耗时严重</li>
+<li>老年代一般是由标记清除或者标记整理的混合实现</li>
+<li><strong>标记</strong> : 从根集合开始扫描,对存活的对象进行标记 ,标记的过程其实就是遍历所有GC Roots ,然后将所有GC  Root 可达的对象标记为存活对象</li>
+<li><strong>清除</strong> : 扫描整个内存空间,回收未被标记的对象</li>
+</ol>
+</li>
+<li><p><strong>标记压缩(Mark-Compact)</strong></p>
+<ol>
+<li><strong>优点</strong> : 没有内存碎片 <strong>缺点</strong> : 需要移动对象,</li>
+<li><strong>标记</strong> : 与标记清除一样</li>
+<li><strong>压缩</strong> : 再次扫描,并往一段滑动</li>
+</ol>
+</li>
+<li><p><strong>标记清除压缩(Mark-Sweep-Compact)</strong></p>
+</li>
+</ol>
+<h3 id="GC总结"><a href="#GC总结" class="headerlink" title="GC总结:"></a>GC总结:</h3><p>内存效率 : 复制算法 &gt; 标记算法 &gt; 标记整理算法(此处效率只是简单的对比时间复杂度,实际情况不一定)</p>
+<p>内存整齐度 : 复制算法 = 标记算法 &gt; 标记清除算法</p>
+<p>内存利用率 : 标记整理算法 = 标记清除算法 &gt; 复制算法</p>
+<p>没有最好的算法,只有最合适的算法 ==&gt; 分代收集算法</p>
+<p>年轻代 : 年轻代的特点是区域相对于老年代较小,对象存活率低,这种情况复制算法的效率只和当前存活对象的大小有关,因此很适合用于年轻代的回收,而复制算法和内存利用率不高的问题,通过hotspot中两个survivor的设计得到缓解</p>
+<p>老年代 : 老年带的特点是区域较大,对象存活率高. 这种情况,存在大量存活率高的对象,复制算法明显变得不合适,一般是由标记清除或者是标记整理混合实现.</p>
+<p>标记阶段的开销与寻获对象的数量成正比,这点上来说,对于老年代,标记清除或者标记整理由一些不符合,但可以通过该多核/线程利用,对并发,并行的形式提高标记效率</p>
+<p>清除阶段的开销与锁管理区域的大小相关,当清除就地处决的特点,回收过程没有对象的移动,使其相对其他对象移动步骤的回收算法,任然是效率最好的,但是需要解决内存碎片问题</p>
+<p>压缩阶段的开销与对象的数据成正比,如上一条所诉,对于大量对象移动的是很大的开销,作为老年代的第一选择并不适合</p>
+<p>基于上面的考虑,老年代一般是由标记清除与标记整理的混合实现.以Hotspot的CMS回收器为例,CMS是基于MArj-Sweep实现的,对于对象的回收效率很高,而对于碎片问题,CMS采用基于MARK_Compac算法的Serial Old回收器作为补偿措施: 当内存回收不佳时,将SerialOld 执行FullGC以达到对老年代内存的整理</p>
 
       
 
@@ -309,7 +385,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/28/Eureka组件/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/31/jvm/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -323,18 +399,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/31/jvm/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          jvm
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/28/Spring-Cloud-简介/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Spring Cloud 简介</div>
+    <a href="/2018/08/28/Eureka组件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Eureka组件</div>
       <i class="icon-circle-right"></i>
     </a>
   
